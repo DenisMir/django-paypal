@@ -77,6 +77,10 @@ class PayPalPaymentsForm(forms.Form):
     page_style = forms.CharField(widget=ValueHiddenInput())
     cbt = forms.CharField(widget=ValueHiddenInput())
     
+    # Tax related stuff
+    tax = forms.CharField(widget=ValueHiddenInput())
+    tax_rate = forms.CharField(widget=ValueHiddenInput())
+    
     # IPN control.
     notify_url = forms.CharField(widget=ValueHiddenInput())
     cancel_return = forms.CharField(widget=ValueHiddenInput())
